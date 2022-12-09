@@ -14,10 +14,10 @@
 //
 // <turbo-frame id="frame">
 //   <table data-controller="link-element">
-//     <tr data-href="/path/to/resource" data-turbo-action="advance">
+//     <tr data-link-element-target="link" data-href="/path/to/resource" data-turbo-action="advance">
 //       <td>...</td>
 //     </tr>
-//     <tr data-href="/foo/bar" data-turbo-stream="true">
+//     <tr data-link-element-target="link" data-href="/foo/bar" data-turbo-stream="true">
 //       <td>Load More</td>
 //     </tr>
 //   </table>
