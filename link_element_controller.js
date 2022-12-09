@@ -55,7 +55,6 @@ export default class extends Controller {
 
   visitUrl(el, event) {
     const url = el.dataset.href;
-    let frameId = el.dataset.turboFrame;
 
     if (event.metaKey) {
       window.open(url, "_blank");
@@ -63,8 +62,7 @@ export default class extends Controller {
       get(url, { responseKind: "turbo-stream" });
     }
     else {
-      if (!frameId)
-        frameId = this.element.closest('turbo-frame')?.id;
+      let frameId = el.dataset.turboFrame || this.element.closest('turbo-frame')?.id;
 
       Turbo.visit(url, { frame: frameId })
 
