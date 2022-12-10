@@ -38,8 +38,8 @@ export default class extends Controller {
       if (event.target.tagName === "A") return
 
       _this.visitUrl(el, event)
-      e.stopPropagation();
-      e.preventDefault();
+      event.stopPropagation();
+      event.preventDefault();
     })
 
     el.addEventListener('mouseenter', (event) => {
